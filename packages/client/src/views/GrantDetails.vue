@@ -1,6 +1,10 @@
 <!-- eslint-disable max-len -->
 <template>
   <section class="container-fluid grants-details-container">
+    <b-breadcrumb>
+        <b-breadcrumb-item href="/#/grants">Home</b-breadcrumb-item>
+     	<b-breadcrumb-item active>{{ selectedGrant.title }}</b-breadcrumb-item>
+    </b-breadcrumb>
   <div>
     <div v-if="loading">
       Loading...
@@ -344,6 +348,9 @@ export default {
 };
 </script>
 <style>
+  .breadcrumb {
+    background-color: #ffffff;
+  }
   .grants-details-container {
     padding: 80px;
   }
